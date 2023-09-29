@@ -147,3 +147,8 @@ bot(
 		}
 	}
 )
+
+
+handler.help = ['gfilter:]
+    handler.tags = ['main']
+    handler.command = /^(gfilter)$/i 
