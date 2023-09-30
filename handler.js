@@ -559,7 +559,7 @@ export async function participantsUpdate({
                   )}&memberCount=${encodeURIComponent(
                     nthMember.toString()
                   )}&avatar=${encodeURIComponent(pp)}&background=${encodeURIComponent(
-                    'https://i.imgur.com/8B4jwGq.jpeg'
+                    'https://telegra.ph/file/eeed83b8fb0b777bb5a2c.jpg'
                   )}`;
           
                   try {
@@ -601,7 +601,7 @@ export async function participantsUpdate({
                   )}&memberCount=${encodeURIComponent(
                     nthMember.toString()
                   )}&avatar=${encodeURIComponent(pp)}&background=${encodeURIComponent(
-                    'https://i.imgur.com/8B4jwGq.jpeg'
+                    'https://telegra.ph/file/eeed83b8fb0b777bb5a2c.jpg'
                   )}`;
           
                   try {
