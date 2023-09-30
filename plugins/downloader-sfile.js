@@ -4,18 +4,7 @@ import fetch from 'node-fetch'
 let handler = async (m, { conn, text }) => {
 	if (text.match(/(https:\/\/sfile.mobi\/)/gi)) {
 		let res = await sfileDl(text)
-		if (!res) throw 'Error :/'
-		await m.reply(Object.keys(res).map(v => `*• ${v.capitalize()}:* ${res[v]}`).join('\n') + '\n\n_Sending file..._')
-		conn.sendMessage(m.chat, { document: { url: res.download }, fileName: res.filename, mimetype: res.mimetype }, { quoted: m })
-	} else if (text) {
-		let [query, page] = text.split`|`
-		let res = await sfileSearch(query, page)
-		if (!res.length) throw `Query "${text}" not found :/`
-		res = res.map((v) => `*Title:* ${v.title}\n*Size:* ${v.size}\n*Link:* ${v.link}`).join`\n\n`
-		m.reply(res)
-
-		// Menambahkan ekstensi yang didukung (zip, rar, 7z, jpg, png) ke dalam daftar
-        if (/mp4/.test(file.name)) {
+		if (/mp4/.test(file.name)) {
             await conn.sendMessage(m.chat, { document: data, mimetype: "video/mp4", filename: `${file.name}.mp4` }, { quoted: m });
         } else if (/pdf/.test(file.name)) {
             await conn.sendMessage(m.chat, { document: data, mimetype: "application/pdf", filename: `${file.name}.pdf` }, { quoted: m });
@@ -29,9 +18,14 @@ let handler = async (m, { conn, text }) => {
             await conn.sendMessage(m.chat, { document: data, mimetype: "image/jpeg", filename: `${file.name}.jpg` }, { quoted: m });
         } else if (/png/.test(file.name)) {
             await conn.sendMessage(m.chat, { document: data, mimetype: "image/png", filename: `${file.name}.png` }, { quoted: m });
-        } else {
-            return m.reply('Error: Format file tidak didukung');
-	}
+		} else if (/hc/.test(file.name)) }
+		await conn.sendMessage(m.chat, { document: data, mimetype: "document/hc", filename: `${file.name}.hc` }, { quoted:m });
+	} else if (text) {
+		let [query, page] = text.split`|`
+		let res = await sfileSearch(query, page)
+		if (!res.length) throw `Query "${text}" not found :/`
+		res = res.map((v) => `*Title:* ${v.title}\n*Size:* ${v.size}\n*Link:* ${v.link}`).join`\n\n`
+		m.reply(res)
 	} else throw 'Input Query / Sfile Url!'
 }
 handler.help = handler.alias = ['sfile']
