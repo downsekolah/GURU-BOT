@@ -22,8 +22,8 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
             mentionedJid: [m.sender],
           title: "AKU HIDUP",
           body: "Auwliaaa bot",
-          thumbnailUrl: mp4,
-          sourceUrl: 'https://telegra.ph/file/c4a5fb26b853e26fcc097.mp4',
+          thumbnailUrl: img,
+          sourceUrl: 'https://chat.whatsapp.com/Hyo1EAuR6MyImDZkacOblt',
           mediaType: 1,
           renderLargerThumbnail: true
           }}
