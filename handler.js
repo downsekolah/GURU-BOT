@@ -608,7 +608,18 @@ export async function participantsUpdate({
                     let leaveResponse = await fetch(leaveApiUrl);
                     let leaveBuffer = await leaveResponse.buffer();
           
-                    this.sendFile(id, leaveBuffer, 'leave.png', text, null, false, { mentions: [user] });
+                    this.sendMessage(id, {
+                        text: text,
+                        contextInfo: {
+                        mentionedJid: [user],
+                        externalAdReply: {
+                        title: "ᴛʜᴇ ɢᴜʀᴜ-ʙᴏᴛ",
+                        body: "Goodbye from  Group",
+                        thumbnailUrl: leaveApiUrl,
+                        sourceUrl: 'https://chat.whatsapp.com/F3sB3pR3tClBvVmlIkqDJp',
+                        mediaType: 1,
+                        renderLargerThumbnail: true
+                        }}})
                   } catch (error) {
                     console.error(`Error generating leave image: ${error}`);
                   }
