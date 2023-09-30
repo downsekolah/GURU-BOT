@@ -23,7 +23,7 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
             externalAdReply: {
           title: "AKU HIDUP",
           body: "Auwliaaa bot",
-          thumbnailUrl: mp4,
+          thumbnailUrl: img,
           sourceUrl: 'https://telegra.ph/file/c4a5fb26b853e26fcc097.mp4',
           mediaType: 1,
           renderLargerThumbnail: true
