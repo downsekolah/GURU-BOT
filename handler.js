@@ -571,8 +571,8 @@ export async function participantsUpdate({
                         contextInfo: {
                         mentionedJid: [user],
                         externalAdReply: {
-                        title: "ᴛʜᴇ ɢᴜʀᴜ-ʙᴏᴛ",
-                        body: "welcome to Group",
+                        title: "Auwliaaa Bot",
+                        body: "Selamat datang di GC",
                         thumbnailUrl: welcomeApiUrl,
                         sourceUrl: 'https://chat.whatsapp.com/DxAOo27oY6A88l2nUKi6Co',
                         mediaType: 1,
@@ -624,8 +624,8 @@ export async function participantsUpdate({
                         contextInfo: {
                         mentionedJid: [user],
                         externalAdReply: {
-                        title: "ᴛʜᴇ ɢᴜʀᴜ-ʙᴏᴛ",
-                        body: "Goodbye from  Group",
+                        title: "Auwliaaa bot",
+                        body: "Sayonaraa",
                         thumbnailUrl: leaveApiUrl,
                         sourceUrl: 'https://chat.whatsapp.com/DxAOo27oY6A88l2nUKi6Co',
                         mediaType: 1,
