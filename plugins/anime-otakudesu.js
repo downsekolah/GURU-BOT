@@ -24,7 +24,7 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
 
 📎 *BATCHHD:* ${result.batchHD}
 `
-await conn.sendButtonImg(m.chat, datathumb, otaku, wm, 'menu', '.menu', m)
+await conn.sendButtonImg(m.chat, datathumb, otaku, 'menu', '.menu', m)
 }
 
 handler.help = ['otakudesu'].map(v => v + ' <Apa>')
