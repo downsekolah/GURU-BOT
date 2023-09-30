@@ -1,24 +1,24 @@
-
-import { areJidsSameUser } from '@whiskeysockets/baileys'
-import { createHash } from 'crypto'
-import PhoneNumber from 'awesome-phonenumber'
+import { areJidsSameUser } from '@whiskeysockets/baileys';
+import { createHash } from 'crypto';
+import PhoneNumber from 'awesome-phonenumber';
 import { canLevelUp, xpRange } from '../lib/levelling.js'
 
 let handler = async (m, { conn, args, usedPrefix, participants }) => {
   let users = Object.entries(global.db.data.users).map(([key, value]) => {
-    return {...value, jid: key}
-  })
-  let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-  let user = global.db.data.users[who]
-  if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`
-  let pp = await conn.profilePictureUrl(who, 'image').catch(_ => './Assets/Gurulogo.js')
-  let about = (await conn.fetchStatus(who).catch(console.error) || {}).status || ''
-  let { name, exp, credit, lastclaim, registered, regTime, age, level, role, warn } = global.db.data.users[who]
-  let { min, xp, max } = xpRange(user.level, global.multiplier)
-  let username = conn.getName(who)
-  let math = max - xp
-  let prem = global.prems.includes(who.split`@`[0])
-  let sn = createHash('md5').update(who).digest('hex')
+    
+    return { ...value, jid: key };
+  });
+  let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
+  let user = global.db.data.users[who];
+  if (!(who in global.db.data.users)) throw '✳️ The user is not found in my database';
+  let pp = await conn.profilePictureUrl(who, 'image').catch(_ => './Guru.jpg');
+  let about = (await conn.fetchStatus(who).catch(console.error))?.status || '';
+  let { name, exp, credit, lastclaim, registered, regTime, age, level, role, warn } = global.db.data.users[who];
+  let { min, xp, max } = xpRange(user.level, global.multiplier);
+  let username = conn.getName(who);
+  let math = max - xp;
+  let prem = global.prems.includes(who.split('@')[0]);
+  let sn = createHash('md5').update(who).digest('hex');
 
   let sortedExp = users.map(toNumber('exp')).sort(sort('exp'))
   let sortedLim = users.map(toNumber('credit')).sort(sort('credit'))
