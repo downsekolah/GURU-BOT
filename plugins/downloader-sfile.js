@@ -1,8 +1,9 @@
 import cheerio from 'cheerio'
 import fetch from 'node-fetch'
 
-let handler = async (m, { conn, text }) => {
+let handler = async (m, { conn, text, args, usedPrefix, command }) => {
 	if (text.match(/(https:\/\/sfile.mobi\/)/gi)) {
+		const file = File.fromURL(text);
 		let res = await sfileDl(text)
 		if (!res) throw 'Error :/'
 		await m.reply(Object.keys(res).map(v => `*• ${v.capitalize()}:* ${res[v]}`).join('\n') + '\n\n_Sending file..._')
@@ -26,7 +27,6 @@ let handler = async (m, { conn, text }) => {
         
             return m.reply('Error: Format file tidak didukung');
 		}
-		conn.sendMessage(m.chat, { document: { url: res.download }, fileName: res.filename, mimetype: res.mimetype }, { quoted: m })
 	} else if (text) {
 		let [query, page] = text.split`|`
 		let res = await sfileSearch(query, page)
