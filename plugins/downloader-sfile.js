@@ -4,6 +4,9 @@ import fetch from 'node-fetch'
 let handler = async (m, { conn, text }) => {
 	if (text.match(/(https:\/\/sfile.mobi\/)/gi)) {
 		let res = await sfileDl(text)
+		if (!res) throw 'Error :/'
+		await m.reply(Object.keys(res).map(v => `*• ${v.capitalize()}:* ${res[v]}`).join('\n') + '\n\n_Sending file..._')
+		conn.sendMessage(m.chat, { document: { url: res.download }, fileName: res.filename, mimetype: res.mimetype }, { quoted: m })
 		if (/mp4/.test(file.name)) {
             await conn.sendMessage(m.chat, { document: data, mimetype: "video/mp4", filename: `${file.name}.mp4` }, { quoted: m });
         } else if (/pdf/.test(file.name)) {
