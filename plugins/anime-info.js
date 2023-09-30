@@ -39,7 +39,7 @@ let animeingfo = `📺 ᴛɪᴛʟᴇ: ${judul}
 📝 ʙᴀᴄᴋɢʀᴏᴜɴᴅ: ${background}
 💬 sɪɴᴏᴘsɪs: ${synopsis}
 `
-conn.sendFile(m.chat, json.data[0].images.jpg.image_url, 'animek.jpg', `*${htki} ANIME INFO ${htka}*\n` + animeingfo, m)
+conn.sendFile(m.chat, json.data[0].images.jpg.image_url, 'animek.jpg', `* ANIME INFO *\n` + animeingfo, m)
 
   conn.reply(m.chat, 'DON\'T FORGET THE DEVELOPER SUPPORT\nXnuvers007\nhttps://saweria.co/xnuvers007', m)
 }
