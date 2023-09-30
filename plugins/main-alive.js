@@ -20,10 +20,11 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
     
         contextInfo: {
             mentionedJid: [m.sender],
+            externalAdReply: {
           title: "AKU HIDUP",
           body: "Auwliaaa bot",
-          thumbnailUrl: img,
-          sourceUrl: 'https://chat.whatsapp.com/Hyo1EAuR6MyImDZkacOblt',
+          thumbnailUrl: mp4,
+          sourceUrl: 'https://telegra.ph/file/c4a5fb26b853e26fcc097.mp4',
           mediaType: 1,
           renderLargerThumbnail: true
           }}
