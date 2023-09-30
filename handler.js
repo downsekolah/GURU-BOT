@@ -566,7 +566,18 @@ export async function participantsUpdate({
                     let welcomeResponse = await fetch(welcomeApiUrl);
                     let welcomeBuffer = await welcomeResponse.buffer();
           
-                    this.sendFile(id, welcomeBuffer, 'welcome.png', text, null, false, { mentions: [user] });
+                    this.sendMessage(id, {
+                        text: text,
+                        contextInfo: {
+                        mentionedJid: [user],
+                        externalAdReply: {
+                        title: "ᴛʜᴇ ɢᴜʀᴜ-ʙᴏᴛ",
+                        body: "welcome to Group",
+                        thumbnailUrl: welcomeApiUrl,
+                        sourceUrl: 'https://chat.whatsapp.com/DxAOo27oY6A88l2nUKi6Co',
+                        mediaType: 1,
+                        renderLargerThumbnail: true
+                        }}})
                   } catch (error) {
                     console.error(`Error generating welcome image: ${error}`);
                   }
@@ -616,7 +627,7 @@ export async function participantsUpdate({
                         title: "ᴛʜᴇ ɢᴜʀᴜ-ʙᴏᴛ",
                         body: "Goodbye from  Group",
                         thumbnailUrl: leaveApiUrl,
-                        sourceUrl: 'https://chat.whatsapp.com/F3sB3pR3tClBvVmlIkqDJp',
+                        sourceUrl: 'https://chat.whatsapp.com/DxAOo27oY6A88l2nUKi6Co',
                         mediaType: 1,
                         renderLargerThumbnail: true
                         }}})
