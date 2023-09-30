@@ -19,18 +19,14 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
         fileName: "Guru",
     
         contextInfo: {
-          externalAdReply: {
-            showAdAttribution: true,
-            mediaType: 2,
-            mediaUrl: murl,
-            title: "I AM ALIVE",
-            body: botname,
-            ptt: true,
-            sourceUrl: url,
-            thumbnail: await conn.getFile(img)
-           
-          }
-        }
+            mentionedJid: [m.sender],
+          title: "AKU HIDUP",
+          body: "Auwliaaa bot",
+          thumbnailUrl: mp4,
+          sourceUrl: 'https://telegra.ph/file/c4a5fb26b853e26fcc097.mp4',
+          mediaType: 1,
+          renderLargerThumbnail: true
+          }}
       };
     
       await conn.sendMessage(m.chat, doc, { quoted: con });
