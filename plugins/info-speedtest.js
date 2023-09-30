@@ -15,7 +15,7 @@ var handler = async (m) => {
     }
 }
 handler.help = ['testspeed']
-handler.tags = ['info']
+handler.tags = ['tools']
 handler.command = /^(speedtest)$/i
 
 export default handler
