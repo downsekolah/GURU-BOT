@@ -76,7 +76,7 @@ conn.sendMessage(m.chat,{ image :{ url : "https://telegra.ph/file/ec8cf04e3a2890
 }
 
 handler.help = ['status']
-handler.tags = ['info']
+handler.tags = ['tools']
 handler.command = /^(status)$/i
 
 export default handler
