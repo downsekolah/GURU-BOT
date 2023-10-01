@@ -2,7 +2,7 @@ let handler = async (m, { conn, usedPrefix, command}) => {
       let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
       if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`;
     
-      let pp = './Assets/Gurulogo.jpg'
+      let pp = './Assets/VID-20230930-WA0464.mp4'
       let more = String.fromCharCode(8206);
       let readMore = more.repeat(850); 
     
@@ -20,7 +20,8 @@ lkr = "*Get ready for the ride, here are your ticket options:*\n\n" +
 "🎨 *" + usedPrefix + "stickermenu* - A rainbow of stickers for your inner artist. Make your chats pop!\n\n" +
 "🧰 *" + usedPrefix + "toolmenu* - Your handy-dandy toolkit. What's your pick, genius?\n\n" +
 "🎩 *" + usedPrefix + "logomenu* - Create a logo that screams YOU. Or whispers. You choose the volume.\n\n" +
-"🌙 *" + usedPrefix + "nsfwmenu* - The After Dark menu. But remember, sharing adult secrets must be consent-based.";
+"🌙 *" + usedPrefix + "nsfwmenu* - The After Dark menu. But remember, sharing adult secrets must be consent-based." +
+"☝️ *" + usedPrefix + "Port Module By CrysTalesia*" - Port Module from me.\n\n" ;
 break;
 
           
@@ -47,6 +48,15 @@ break;
    ⎪⌲👑    Guru
    ┗━━━ʕ•㉨•ʔ━━━┛`; // Your bot menu message here
           break;
+            case 'port' :
+   lkr = ` THIS IS JUST EXPERIMENTAL'
+   _${usedPrefix}infoanime_
+   _${usedPrefix}mega_
+   _${usedPrefix}sfile_
+   _${usedPrefix}zodiac_
+   _${usedPrefix}pixivdl_
+   This Test Module(Buggy)`; //
+           break;
         case 'ownermenu':
           lkr = `❀° ┄──•••───╮
           𝙊𝙒𝙉𝙀𝙍 𝙈𝙀𝙉𝙐  
