@@ -21,7 +21,7 @@ lkr = "*Get ready for the ride, here are your ticket options:*\n\n" +
 "🧰 *" + usedPrefix + "toolmenu* - Your handy-dandy toolkit. What's your pick, genius?\n\n" +
 "🎩 *" + usedPrefix + "logomenu* - Create a logo that screams YOU. Or whispers. You choose the volume.\n\n" +
 "🌙 *" + usedPrefix + "nsfwmenu* - The After Dark menu. But remember, sharing adult secrets must be consent-based." +
-"☝️ *" + usedPrefix + "Port Module By CrysTalesia* - Port Module from me.\n\n" ;
+"☝️ *" + usedPrefix + "portmenu* - Port Module from me.\n\n" ;
 break;
 
           
@@ -48,7 +48,7 @@ break;
    ⎪⌲👑    Guru
    ┗━━━ʕ•㉨•ʔ━━━┛`; // Your bot menu message here
           break;
-            case 'port' :
+            case 'portmenu' :
    lkr = ` THIS IS JUST EXPERIMENTAL'
    _${usedPrefix}infoanime_
    _${usedPrefix}mega_
