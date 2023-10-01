@@ -13,14 +13,6 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
         
         const data = await file.downloadBuffer();
         
-        conn.sendMessage(m.chat, { document: { url: res.downloadUrl }, fileName: res.fileName, mimetype: res.mimetype }, { quoted: m })
-	m.react(done)
-   } catch {
-	m.reply('Error: Check the link or try another link') 
-  }
-}
-
-        
         // Menambahkan ekstensi yang didukung (zip, rar, 7z, jpg, png) ke dalam daftar
         if (/mp4/.test(file.name)) {
             await conn.sendMessage(m.chat, { document: data, mimetype: "video/mp4", filename: `${file.name}.mp4` }, { quoted: m });
