@@ -45,8 +45,9 @@
         "acrcloud": "^1.4.0",
         "@shineiichijo/marika": "^2.0.6",
         "aptoide-scraper": "^1.0.1",
-        "axios": "^1.4.0",
+        "axios": "^0.27.2"
         "canvacord": "^5.4.8",
+        "btch-downloader": "*",
         "cfonts": "^3.1.1",
         "chess.js": "*",
         "chalk": "^5.1.0",
@@ -90,6 +91,7 @@
         "spotifydl-core": "github:Guru322/Fix-spotifydl-core",
         "terminal-image": "^2.0.0",
         "url-regex-safe": "^3.0.0",
+        "url-regex": "^5.0.0",
         "emoji-api": "^2.0.1",
         "xfarr-api": "^1.0.3",
         "hxz-api": "^1.0.1",
