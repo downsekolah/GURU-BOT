@@ -39,4 +39,4 @@ handler.help= handler.command = ['capcut','cc','capcutdl','ccdl'];
 handler.tags = ['downloader'];
 handler.limit = false;
 handler.group = false;
-module.exports = handler;
+ export default handler 
