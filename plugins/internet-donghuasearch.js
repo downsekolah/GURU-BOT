@@ -37,6 +37,6 @@ handler.command = handler.help = ['donghuasearch'];
 handler.tags = ['internet'];
 handler.premium = false;
 handler.group = false;
-handler.limit = true
+handler.limit = false
 
-module.exports = handler;
+export default handler
