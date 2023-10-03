@@ -8,5 +8,5 @@ await conn.sendFile(m.chat, url.image, 'file.jpg', wm, m)
 handler.command = /^(meme)$/i
 handler.tags = ['fun']
 handler.help = ['meme']
-handler.limit = true
-module.exports = handler
+handler.limit = false
+ export default handler 
