@@ -25,6 +25,7 @@ throw `Can't find data!`
  };
 
 handler.command = ['xnxxsearch'];
-handler.tags = ['internet'];
+handler.tags = ['downloader'];
+handler.register = true
 
-module.exports = handler;
+ export default handler 
