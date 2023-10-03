@@ -25,5 +25,5 @@ ${otaku.url.batch}
 handler.help = ['otakudesu <link>']
 handler.tags = ['anime']
 handler.command = /^otakudesu$/i
-handler.limit = true
+handler.limit = false
 export default handler
