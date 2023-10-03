@@ -25,7 +25,7 @@ handler.tags = ['ai']
 handler.command = /^(animediff)$/i
 
 handler.premium = false
-handler.limit = true
+handler.limit = false
 handler.register = true
 
 export default handler
