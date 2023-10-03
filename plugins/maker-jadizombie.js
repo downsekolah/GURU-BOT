@@ -30,5 +30,5 @@ handler.help = ['jadizombie'];
 handler.command = ['jadizombie'];
 handler.tags = ['maker'];
 handler.premium = false;
-handler.limit = 5;
-module.exports = handler;
+handler.limit = false
+export default handler
