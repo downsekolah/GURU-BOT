@@ -19,7 +19,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 handler.help = ['animediff2 <prompt>']
 handler.tags = ['ai']
 handler.command = /^(animediff2)$/i
-handler.limit = true
+handler.limit = false
 handler.register = true
 
 export default handler
