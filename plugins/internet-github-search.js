@@ -25,7 +25,7 @@ handler.tags = ['tools']
 
 handler.command = /^g(ithub|h)search$/i
 
-module.exports = handler
+export default handler
 
 function formatDate(n, locale = 'id') {
     let d = new Date(n)
