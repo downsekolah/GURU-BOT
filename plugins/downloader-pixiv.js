@@ -18,7 +18,7 @@ handler.help = ['pixivdl <url>']
 handler.tags = ['downloader']
 handler.command = /^(pixivdl)$/i
 
-handler.limit = true
+handler.limit = false
 handler.register = true
 
 export default handler
