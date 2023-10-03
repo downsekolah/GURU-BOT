@@ -17,4 +17,4 @@ handler.limit = false;
 handler.private = false;
 handler.group = false;
 
-module.exports = handler;
+export default handler
