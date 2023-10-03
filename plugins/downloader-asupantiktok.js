@@ -43,4 +43,4 @@ handler.tags = ['downloader'];
 handler.command = /^(asupantiktok)$/i;
 handler.limit = false;
 
-module.exports = handler;
+export default handler
