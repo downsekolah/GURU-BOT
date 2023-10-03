@@ -33,7 +33,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 handler.help = ['douyin'];
 handler.command = /^(douyin)$/i;
 handler.tags = ['downloader'];
-handler.limit = true;
+handler.limit = false;
 handler.group = false;
 handler.premium = false;
 handler.owner = false;
@@ -41,5 +41,6 @@ handler.admin = false;
 handler.botAdmin = false;
 handler.fail = null;
 handler.private = false;
+handler.register = true
 
-module.exports = handler;
+ export default handler 
