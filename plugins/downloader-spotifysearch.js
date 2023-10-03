@@ -36,6 +36,6 @@ handler.command = handler.help = ['spotifysearch'];
 handler.tags = ['downloader'];
 handler.premium = false;
 handler.group = false;
-handler.limit = true
+handler.limit = false;
 
-module.exports = handler;
+ export default handler 
