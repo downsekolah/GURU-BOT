@@ -1,43 +1,20 @@
-const fetch = require('node-fetch')
+import fetch from 'node-fetch'
 
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-	if (!text) throw `*Usage : ${usedPrefix + command} url*\n\nExample: ${usedPrefix + command} https://soundcloud.com/issabella-marchelina/sisa-rasa-mahalini-official-audio?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing`
-	if (!(text.includes('http://') || text.includes('https://'))) throw `url invalid, please input a valid url. Try with add http:// or https://`
-	try {
-		let res = await fetch(`https://api.botcahx.live/api/dowloader/soundcloud?url=${text}&apikey=${btc}`)
-		let anu = await res.json()
-		anu = anu.result
-		let ini_txt = `*${anu.title}*\n\n`
-		ini_txt += `⭔ Duration : ${anu.duration}\n`
-		ini_txt += `⭔ Quality : *${anu.quality}*`
-		await conn.sendFile(m.chat, anu.thumbnail, 'scloud.jpg', ini_txt, m)
-		conn.sendMessage(m.chat, {
-                audio: {
-                    url: anu.download
-                },
-                mimetype: 'audio/mpeg',
-                contextInfo: {
-                    externalAdReply: {
-                        title: anu.title,
-                        body: "",
-                        thumbnailUrl: anu.thumbnail,
-                        sourceUrl: anu.download,
-                        mediaType: 1,
-                        showAdAttribution: true,
-                        renderLargerThumbnail: true
-                    }
-                }
-            }, {
-                quoted: m
-            });		
-	} catch (e) {
-		console.log(e)
-		m.reply(`Invalid Soundcloud URL / terjadi kesalahan.`)
-	}
+let handler = async (m, { conn, usedPrefix, args, command, text }) => {
+if (!text) throw `Linknya?\nExample: *.soundcloud https://soundcloud.com/ndaa-212683099/dj-coba-kau-ingat-ingat-kembali-seharusnya-aku-jungle-dutch-terbaru-2021-full-bass-viral-tik?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing*`
+  m.reply(wait)
+  let res = await fetch(`https://api.xyroinee.xyz/api/downloader/soundcloud?url=${text}&apikey=${global.xyro}`)
+  let json = await res.json()
+  let { title, duration, quality, thumbnail, download } = json.data
+  await conn.sendFile(m.chat, thumbnail, 'oh.jpg', `Title: ${title}
+Duration: ${duration}
+Quality: ${quality}
+`, m)
+ await conn.sendFile(m.chat, download, '', m)
 }
-
-handler.help = ['soundcloud <url>']
+handler.help = ['soundcloud']
 handler.tags = ['downloader']
-handler.command = /^(s(ound)?cloud)$/i
+handler.command = /^(soundcloud)$/i
+handler.limit = true
 
- export default handler 
+export default handler
