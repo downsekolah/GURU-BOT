@@ -19,8 +19,7 @@ handler.tags = ['tools']
 handler.command = /^((harta)?tahta)$/i
 handler.limit = false
 
-module.exports = handler
-
+export default handler
 let { spawn } = require('child_process')
 let path = require('path')
 let src = path.join(__dirname, '../src/')
