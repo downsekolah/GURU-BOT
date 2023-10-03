@@ -10,7 +10,7 @@ conn.reply(m.chat, anu, m)
 handler.help = ['galau']
 handler.tags = ['quotes']
 handler.command = /^(galau)$/i
-module.exports = handler
+export default handler
 
 function pickRandom(list) {
     return list[Math.floor(list.length * Math.random())]
