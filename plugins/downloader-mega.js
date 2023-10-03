@@ -36,6 +36,9 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
     }
 }
 
+conn.sendMessage(m.chat, { document: { url: res.downloadUrl }, fileName: res.fileName, mimetype: res.mimetype }, { quoted: m })
+	m.react(done)
+
 handler.help = ["mega"]
 handler.tags = ["downloader"]
 handler.command = /^(mega)$/i
