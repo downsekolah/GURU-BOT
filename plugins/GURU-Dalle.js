@@ -6,16 +6,11 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   try {
     m.reply('*Please wait, generating images...*');
 
-    const endpoint = `https://gurugpt.cyclic.app/dalle?prompt=${encodeURIComponent(text)}&model=art`;
-    const response = await fetch(endpoint);
-    const data = await response.json();
-
-    if (data.result && Array.isArray(data.result)) {
-      for (let i = 0; i < Math.min(data.result.length, 2); i++) {
-        const imageUrl = data.result[i];
-        const imageResponse = await fetch(imageUrl);
-        const imageBuffer = await imageResponse.buffer();
-        await conn.sendFile(m.chat, imageBuffer, null, null, m);
+    "const endpoint = `https://gurugpt.cyclic.app/dalle?prompt=${encodeURIComponent(text)}`;"
+ https://github.com/Guru322/GURU-BOT/commit/a5fb877af91ff67d560c02ec4c93dee862420ce8#:~:text=const%20endpoint%20%3D%20%60https%3A//gurugpt.cyclic.app/dalle%3Fprompt%3D%24%7BencodeURIComponent(text)%7D%60%3B
+    if (response.ok) {
+      const imageBuffer = await response.buffer();
+      await conn.sendFile(m.chat, imageBuffer, 'image.png', null, m);
       }
     } else {
       throw '*Image generation failed*';
@@ -25,8 +20,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 };
 
-handler.help = ['dalle']
-handler.tags = ['AI']
-handler.command = ['ai2', 'dalle', 'gen', 'gimg', 'openai2'];
+handler.help = ['dalle'];
+handler.tags = ['AI'];
+handler.command = ['dalle', 'gen', 'gimg', 'openai2'];
 export default handler;
 
