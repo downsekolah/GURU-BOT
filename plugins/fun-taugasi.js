@@ -9,13 +9,13 @@ handler.mods = false
 handler.premium = false
 handler.group = false
 handler.private = false
-handler.limit = true
+handler.limit = false
 handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
 
-module.exports = handler
+ export default handler 
 
 function pickRandom(list) {
   return list[Math.floor(list.length * Math.random())]
