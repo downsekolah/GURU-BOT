@@ -1,19 +1,18 @@
-import TicTacToe from '../lib/tictactoe.js'
+const TicTacToe = require("../lib/tictactoe")
 
 let handler = async (m, { conn, usedPrefix, command, text }) => {
     conn.game = conn.game ? conn.game : {}
-    if (Object.values(conn.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) throw `✳️ You are still in the game to restart the session write : *${usedPrefix}delttt*`
-    if (!text) throw `✳️ Put a number in the room`
+    if (Object.values(conn.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) throw 'Kamu masih didalam game'
     let room = Object.values(conn.game).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
     // m.reply('[WIP Feature]')
     if (room) {
-        m.reply('✅ mate found')
+        m.reply('Partner ditemukan!')
         room.o = m.chat
         room.game.playerO = m.sender
         room.state = 'PLAYING'
         let arr = room.game.render().map(v => {
             return {
-                X: '❎',
+                X: '❌',
                 O: '⭕',
                 1: '1️⃣',
                 2: '2️⃣',
@@ -27,22 +26,23 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
             }[v]
         })
         let str = `
-Waiting for @${room.game.currentTurn.split('@')[0]} as first player
-        
+Room ID: ${room.id}
 ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
 ${arr.slice(6).join('')}
 
-▢ *Room ID* ${room.id}
-
-▢ *Rules*
-‣ Make 3 rows of symbols vertically, horizontally or diagonally to win ‣ Type *surrender* to exit the game and be declared defeated
+Menunggu @${room.game.currentTurn.split('@')[0]}
+Ketik *nyerah* untuk nyerah
 `.trim()
-        if (room.x !== room.o) await conn.reply(room.x, str, m, {
-            mentions: conn.parseMention(str)
+        if (room.x !== room.o) m.reply(str, room.x, {
+            contextInfo: {
+                mentionedJid: conn.parseMention(str)
+            }
         })
-        await conn.reply(room.o, str, m, {
-            mentions: conn.parseMention(str)
+        m.reply(str, room.o, {
+            contextInfo: {
+                mentionedJid: conn.parseMention(str)
+            }
         })
     } else {
         room = {
@@ -53,21 +53,14 @@ ${arr.slice(6).join('')}
             state: 'WAITING'
         }
         if (text) room.name = text
-        
-     conn.reply(m.chat, `⏳ *expecting partner*\nType the following command to accept
-▢ *${usedPrefix + command} ${text}*
-
-🎁 Reward:  *4999 XP*`, m, {
-            mentions: conn.parseMention(text)
-        })
-        
-   conn.game[room.id] = room
+        m.reply('Menunggu partner' + (text ? `mengetik command dibawah ini
+${usedPrefix}${command} ${text}` : ''))
+        conn.game[room.id] = room
     }
-    
 }
 
-handler.help = ['tictactoe <tag number>']
+handler.help = ['tictactoe', 'ttt'].map(v => v + ' [custom room name]')
 handler.tags = ['game']
-handler.command = ['tictactoe', 'ttc', 'ttt', 'xo']
+handler.command = /^(tictactoe|t{3})$/
 
-export default handler
+module.exports = handler
