@@ -21,10 +21,7 @@ let handler = async(m, { conn }) => {
 handler.help = ['asupan']
 handler.tags = ['downloader']
 handler.command = /^asupan$/i
-handler.owner = false
-handler.premium = false
-handler.group = false
-handler.private = false
+handler.register = true
 
 function pickRandom(list) {
   return list[Math.floor(list.length * Math.random())]
