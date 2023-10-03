@@ -10,9 +10,9 @@ conn.sendFile( m.chat, url, `${args[1]} ${args[2]}.zip`, null, m)
 
 }
 handler.help = ['githubdl']
-handler.tags = ['github']
+handler.tags = ['downloader']
 handler.command = /githubdl/i
-
+handler.register = true
 handler.limit = false
 
-module.exports = handler
+export default handler
