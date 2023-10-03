@@ -51,6 +51,15 @@ global.APIKeys = { // APIKey Here
 
 global.btc = 'ZwZiTcVm'
 
+    global.lann = 'ZtJgTh53'
+
+global.APIs = {   
+  btc: 'https://api.botcahx.live'
+}
+global.APIKeys = { 
+  'https://api.botcahx.live': 'APIKEY' 
+}
+
 // Sticker WM
 global.botname = 'Auwliaaa'
 global.premium = 'true'
