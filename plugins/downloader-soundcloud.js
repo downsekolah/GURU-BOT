@@ -40,4 +40,4 @@ handler.help = ['soundcloud <url>']
 handler.tags = ['downloader']
 handler.command = /^(s(ound)?cloud)$/i
 
-module.exports = handler
+ export default handler 
