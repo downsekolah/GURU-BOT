@@ -24,4 +24,5 @@ handler.group = false
 handler.private = false
 handler.register = true
 
-module.exports = handler
+export default handler
+
