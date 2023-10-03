@@ -12,5 +12,5 @@ let hasil = await anu.json()
 conn.sendMessage(m.chat, { video: { url: hasil.result.url }, fileName: 'xnxx.mp4', mimetype: 'video/mp4' }, { quoted: m })
   }                                                    
 handler.command = handler.help = ['xvideosdown','xdown'];
-handler.tags = ['internet'];
-module.exports = handler;
+handler.tags = ['port'];
+ export default handler 
