@@ -37,6 +37,6 @@ try {
 
 handler.help= handler.command = ['capcut','cc','capcutdl','ccdl'];
 handler.tags = ['downloader'];
-handler.limit = true;
+handler.limit = false;
 handler.group = false;
 module.exports = handler;
