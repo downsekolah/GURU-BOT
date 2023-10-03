@@ -68,6 +68,6 @@ let handler = async (m, {
 handler.command = handler.help = ['mp3','mp4'];
 handler.tags = ['downloader'];
 handler.exp = 0;
-handler.limit = true;
+handler.limit = false;
 handler.premium = false;
-module.exports = handler;
+ export default handler;
