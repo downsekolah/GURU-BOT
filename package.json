@@ -1,6 +1,6 @@
 { 
     "name": "gurubot",
-    "version": "6.3.1",
+    "version": "2.0.0",
     "description": "Advanced WhatsApp Bot",
     "main": "index.js",
     "type": "module",
@@ -45,7 +45,7 @@
         "acrcloud": "^1.4.0",
         "@shineiichijo/marika": "^2.0.6",
         "aptoide-scraper": "^1.0.1",
-        "axios": "^0.27.2"
+        "axios": "^1.4.0",
         "canvacord": "^5.4.8",
         "btch-downloader": "*",
         "cfonts": "^3.1.1",
