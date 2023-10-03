@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-  if (!text) throw `*This command generates image from texts*\n\n*𝙴xample usage*\n*◉ ${usedPrefix + command} Beautiful animegirl*\n*◉ ${usedPrefix + command} elon musk in pink output*`;
+  if (!text) throw `*This command generates images from text prompts*\n\n*𝙴xample usage*\n*◉ ${usedPrefix + command} Beautiful anime girl*\n*◉ ${usedPrefix + command} Elon Musk in pink output*`;
 
   try {
     m.reply('*Please wait, generating images...*');
