@@ -12,6 +12,6 @@ var handler = async (m, {conn, text, usedPrefix}) => {
 handler.command = handler.help =['ytshorts','youtubeshorts','shorts','short'];
 handler.tags = ['downloader'];
 handler.exp = 0;
-handler.limit = true;
+handler.limit = false;
 handler.premium = false;
-module.exports = handler;
+ export default handler 
