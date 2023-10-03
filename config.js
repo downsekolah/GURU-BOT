@@ -49,6 +49,8 @@ global.APIKeys = { // APIKey Here
   'https://api-fgmods.ddns.net': 'fg-dylux'
 }
 
+global.btc = 'ZwZiTcVm'
+
 // Sticker WM
 global.botname = 'Auwliaaa'
 global.premium = 'true'
