@@ -16,5 +16,5 @@ let otakuinfo = `• *Title:* ${otaku.data[0].title}
 handler.help = ['anime <judul>']
 handler.tags = ['anime']
 handler.command = /^anime$/i
-handler.limit = true
+handler.limit = false
 export default handler
