@@ -27,7 +27,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 };
 handler.command = handler.help = ['tiktokslide','ttslide','slide'];
 handler.tags = ['downloader'];
-handler.limit = true;
+handler.limit = false;
 handler.group = false;
 handler.premium = false;
 handler.owner = false;
@@ -36,7 +36,7 @@ handler.botAdmin = false;
 handler.fail = null;
 handler.private = false;
 
-module.exports = handler
+ export default handler 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
