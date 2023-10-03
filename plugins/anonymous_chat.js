@@ -44,6 +44,6 @@ handler.help = ['start', 'leave', 'next']
 handler.tags = ['tools']
 handler.command = ['start', 'leave', 'next']
 
-handler.private = true
+handler.private = false
 
 export default handler
