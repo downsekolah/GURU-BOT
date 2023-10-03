@@ -19,8 +19,9 @@ handler.help = ['bkp']
 handler.tags = ['downloader']
 handler.command = /^bkp$/i
 handler.owner = false
-handler.premium = true
+handler.premium = false
 handler.group = false
 handler.private = false
+handler.register = true
 
 module.exports = handler
