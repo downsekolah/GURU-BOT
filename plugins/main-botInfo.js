@@ -55,20 +55,18 @@ let infobt = `
 ▢ *${chats.length - groupsIn.length}* private chats
 ▢ *${chats.length}* Total Chats
 
-*≡ OWNER*
-  *GURU*
-▢ Instagram :
-  • https://instagram.com/asli_guru69
-▢ GitHub :
-  • https://github.com/Guru322
-▢ Telegram : 
-  • t.me/i_want_to_be_isekaied (GURU) 
-▢ YouTube : 
-  • https://youtube.com/@Asliguru
 
  *≡ S E R V E R*
 *🛑 RAM:* ${format(totalmem() - freemem())} / ${format(totalmem())}
 *🔵 FreeRAM:* ${format(freemem())}
+OS : *${OS}*
+CPU Model : *${cpuModel}*
+CPU Core : *${cpuCore} Core*
+CPU : *${cpuPer}%*
+Drive : *${driveUsed} / ${driveTotal} (${drivePer})*
+Ping : *${Math.round(neww - old)} ms*
+Internet IN : *${netsIn}*
+Internet OUT : *${netsOut}*
 
 *≡  NodeJS memory *
 ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
