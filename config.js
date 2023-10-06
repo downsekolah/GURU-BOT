@@ -7,16 +7,16 @@ import axios from 'axios'
 
 
 global.owner = [
-  ['62895635213000', 'NOMOR BOT', true],
+  ['6285156489458', 'NOMOR BOT', true],
   ['6285156489458', 'NOMOR OWNER', true], 
   [''] 
 ] //Number of owners
 
 //global.pairingNumber = "" //put your bot number here
 
-global.mods = ['62895635213000','6285156489458'] 
-global.prems = ['62895635213000','6285156489458']
-global.allowed = ['62895635213000','6285156489458']
+global.mods = ['6285156489458',''] 
+global.prems = ['6285156489458','']
+global.allowed = ['6285156489458','']
 global.keysZens = ['c2459db922', '37CC845916', '6fb0eff124']
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
 global.keysxteammm = ['29d4b59a4aa687ca', '5LTV57azwaid7dXfz5fzJu', 'cb15ed422c71a2fb', '5bd33b276d41d6b4', 'HIRO', 'kurrxd09', 'ebb6251cc00f9c63']
@@ -61,13 +61,13 @@ global.APIKeys = {
 }
 
 // Sticker WM
-global.botname = 'Auwliaaa'
+global.botname = 'Talesia Bot'
 global.premium = 'true'
-global.packname = 'Auwliaaa pack' 
-global.author = 'Auwliaaa' 
-global.menuvid = 'https://telegra.ph/file/bb5b3b8c997ea0615dafd.mp4'
+global.packname = 'Tales Pack' 
+global.author = 'CrysTalesia' 
+global.menuvid = 'https://telegra.ph/file/2eca9accc1a60432d9868.mp4'
 global.igfg = '\n\n' 
-global.dygp = 'https://chat.whatsapp.com/BXhbOf7F3zEB0HgCH0lSPY, https://chat.whatsapp.com/Hyo1EAuR6MyImDZkacOblt'
+global.dygp = 'https://chat.whatsapp.com/LJW5MnCa1Qp79ViN1ToxYg, https://chat.whatsapp.com/Hyo1EAuR6MyImDZkacOblt'
 global.fgsc = '' 
 global.fgyt = ''
 global.fgpyp = ''
