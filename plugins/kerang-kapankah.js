@@ -8,16 +8,8 @@ let handler = async (m, { conn, text }) => {
 }
 handler.help = ['', 'kah'].map(v => 'kapan' + v + ' <text>?')
 handler.tags = ['kerang']
-handler.customPrefix = /(\?$)/
 handler.command = /^kapan(kah)?$/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
-
-handler.admin = false
-handler.botAdmin = false
+handler.owner = true
 
 handler.fail = null
 
