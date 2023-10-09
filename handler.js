@@ -182,7 +182,7 @@ export async function handler(chatUpdate) {
                 if (!("status" in settings)) settings.status = 0
 
             } else global.db.data.settings[this.user.jid] = {
-                self: false,
+                self: true,
                 autoread: false,
                 restrict: false,
                 restartDB: 0,
